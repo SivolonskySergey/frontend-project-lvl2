@@ -5,4 +5,4 @@
 ### Test Coverage:
 <a href="https://codeclimate.com/github/SivolonskySergey/frontend-project-lvl2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5391f960cd9fb277cd8a/test_coverage" /></a>
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/SivolonskySergey/frontend-project-lvl2/actions/workflows/main.yml/badge.svg)
