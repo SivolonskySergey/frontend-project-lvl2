@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-job:
-    runs-on: Linux Mint 20.1
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
