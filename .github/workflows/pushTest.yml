@@ -5,6 +5,8 @@ on:
     branches:
       - '**'
   pull-request:
+    branches:
+      - '**'
 
 jobs:
   test-job:
