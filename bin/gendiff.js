@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import program from 'commander';
-import _ from 'lodash';
-import compare from '../src/compare.js';
+import compare from '../index.js';
 
 program
   .version('0.0.1')
@@ -9,13 +8,12 @@ program
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format <type>', 'output format')
   .action((filepath1, filepath2, options) => {
-	if (options.format) {
-	  const f1split = filepath1.split('.');
-	  const f2split = filepath2.split('.');
+    if (options.format) {
+      const f1split = filepath1.split('.');
+      const f2split = filepath2.split('.');
       const getFormat = `${f1split[1]}, ${f2split[1]}`;
-	  console.log(getFormat);
-	}
-	console.log
+      console.log(getFormat);
+    }
     console.log(compare(filepath1, filepath2));
   })
 

@@ -1,0 +1,19 @@
+name: 'test my project'
+on:
+  push:
+  pull-request:
+jobs:
+  test-job:
+    runs-on: Linux Mint 20.1
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      name: 'setup node'
+      with:
+        node-version: '14.x'
+
+    - name: 'install'
+      run: npm i
+
+    - name: 'test'
+      run: make test

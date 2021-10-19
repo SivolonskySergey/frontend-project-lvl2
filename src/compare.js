@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import _ from 'lodash';
 import openFile from './openfile.js';
+import makestring from './makestring.js';
 
 const compare = (file1, file2) => {
   // ----- находим и открываем файлы
@@ -34,10 +35,7 @@ const compare = (file1, file2) => {
     }
     return acc;
   }, {});
-  const strDiff = JSON.stringify(diff, null, ' ');
-  const repalceQuotes = strDiff.replace(/['"]+/g, '');
-  const replaceComma = repalceQuotes.replace(/[',]+/g, '');
-  return replaceComma;
+  return makestring(diff);
 };
 
 export default compare;

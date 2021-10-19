@@ -5,10 +5,13 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest --bail"
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
+  },
+  "engines": {
+    "node": ">=14"
   },
   "repository": {
     "type": "git",
@@ -22,11 +25,16 @@
   "homepage": "https://github.com/SivolonskySergey/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^7.2.0",
+    "debug": "^4.3.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "eslint": "^7.28.0",
+    "@jest/globals": "^27.0.1",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4"
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "jest": "^27.2.5",
+    "jest-cli": "^27.2.5"
   }
 }

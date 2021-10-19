@@ -1,0 +1,7 @@
+{
+  "host": "rumbler.ru",
+  "timeout": 35,
+  "proxy": "234.53.26",
+  "follow": true,
+  "who": "me"
+}

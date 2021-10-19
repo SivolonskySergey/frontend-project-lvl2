@@ -1,11 +1,15 @@
 import { readFileSync } from 'fs';
-import { cwd } from 'process';
+import { dirname } from 'path';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const openFile = (filename) => {
-  const endDir = '/home/ehg47/hexlet-project-num-2/frontend-project-lvl2/bin';
-  const relPath = path.relative(cwd(), endDir);
-  const absPath = path.resolve(cwd(), relPath, filename);
-  return readFileSync(absPath, 'utf8');
+  const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+  const readFile = readFileSync(getFixturePath(filename), 'utf8');
+  return readFile;
 };
+console.log(__dirname);
 export default openFile;
