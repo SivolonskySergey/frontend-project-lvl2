@@ -5,11 +5,11 @@ import makestring from './makestring.js';
 
 const compare = (file1, file2) => {
   // ----- находим и открываем файлы
-  const open1 = openFile(file1);
-  const open2 = openFile(file2);
+  const fileJson1 = openFile(file1);
+  const fileJson2 = openFile(file2);
   // ----- конверитруем из JSON => Object => Array и сортируем
-  const Jparse1 = _.sortBy(_.toPairs(JSON.parse(open1)));
-  const Jparse2 = _.sortBy(_.toPairs(JSON.parse(open2)));
+  const Jparse1 = _.sortBy(_.toPairs(JSON.parse(fileJson1)));
+  const Jparse2 = _.sortBy(_.toPairs(JSON.parse(fileJson2)));
   // console.log(Jparse2);
   // console.log(Jparse1);
   // ----- объединяем в один массив
