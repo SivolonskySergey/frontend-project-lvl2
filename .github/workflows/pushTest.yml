@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        super_secret: ${{ secrets.SECRET_SERYOGA }}
+      env:
+        SECRET_SERYOGA: ${{ secrets.SECRET_SERYOGA }}
     - uses: actions/setup-node@v1
       name: 'setup node'
       with:
