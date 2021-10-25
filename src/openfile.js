@@ -11,5 +11,5 @@ const openFile = (filename) => {
   const readFile = readFileSync(getFixturePath(filename), 'utf8');
   return readFile;
 };
-console.log(openFile('file1.json'));
+
 export default openFile;
