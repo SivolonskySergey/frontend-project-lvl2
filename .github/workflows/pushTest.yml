@@ -26,11 +26,11 @@ jobs:
     - name: Run linter
       run: |
         make lint
-        
+
     - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v2.7.4
-        env:
-          super_secret: ${{ secrets.SECRET_SERYOGA }}
-        with:
-          coverageCommand: make test-coverage
-          debug: true
+      uses: paambaati/codeclimate-action@v2.7.4
+      env:
+        super_secret: ${{ secrets.SECRET_SERYOGA }}
+      with:
+        coverageCommand: make test-coverage
+        debug: true
