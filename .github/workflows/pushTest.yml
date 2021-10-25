@@ -26,7 +26,7 @@ jobs:
     - name: Test & publish code coverage
       uses: paambaati/codeclimate-action@v2.7.4
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.SECRET_SERYOGA }}
+        CC_TEST_REPORTER_ID: 8c69b9036d5d80f073ceed46771ed190f72453c4a254d7af0ec741b742022320
       with:
         coverageCommand: make test-coverage
         debug: true
