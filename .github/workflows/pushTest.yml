@@ -20,6 +20,10 @@ jobs:
     - name: 'install'
       run: npm i
 
+    - name: Run linter
+      run: |
+        make lint
+
     - name: 'test'
       run: make test
     
