@@ -8,8 +8,9 @@ program
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format <type>', 'output format')
   .action((filepath1, filepath2) => {
-    const result = compare(filepath1, filepath2);
-	console.log(result);
+    const letCompare = compare(filepath1, filepath2);
+    // eslint-disable-next-line no-console
+    const result = console.log(letCompare);
     return result;
   })
   .parse(process.argv);
