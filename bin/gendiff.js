@@ -12,9 +12,7 @@ program
       const f1split = filepath1.split('.');
       const f2split = filepath2.split('.');
       const getFormat = `${f1split[1]}, ${f2split[1]}`;
-      console.log(getFormat);
     }
-    console.log(compare(filepath1, filepath2));
   })
 
   .parse(process.argv);
