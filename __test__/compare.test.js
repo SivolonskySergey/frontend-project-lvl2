@@ -1,19 +1,25 @@
-import { test, expect } from '@jest/globals';
-import compare from '../src/compare';
-import makestring from '../src/makestring.js';
+import { test, expect, beforeAll } from '@jest/globals';
+import genDiff from '../src/index.js';
+import openfile from '../src/openfile.js';
 
-const result = {
-  '- follow': true,
-  '- host': 'rumbler.ru',
-  '- proxy': '234.53.26',
-  '  timeout': 35,
-  '  who': 'me',
-  '+ host': 'hexlet.io',
-  '+ proxy': '123.234.53.22',
-  '+ status': false,
-};
+const open = (filename) => openfile(filename);
 
-test('compare', () => {
-  expect(typeof compare('testfile1.json', 'testfile2.json')).toBe('string');
-  expect(compare('testfile1.json', 'testfile2.json')).toEqual(makestring(result));
+const fileExtensionsList = ['.json', '.yml'];
+
+let referenceFileContentStylish;
+let referenceFileContentPlain;
+let referenceFileContentJson;
+
+beforeAll(() => {
+  referenceFileContentStylish = open('result_stilysh');
+  referenceFileContentPlain = open('result_plain');
+  referenceFileContentJson = open('result_json');
+});
+
+test.each(fileExtensionsList)('Test %s files with stylish, plain and json presentation formats', (extension) => {
+  const pathToFile1 = `file1${extension}`;
+  const pathToFile2 = `file2${extension}`;
+  expect(genDiff(pathToFile1, pathToFile2, 'stilysh')).toEqual(referenceFileContentStylish);
+  expect(genDiff(pathToFile1, pathToFile2, 'plain')).toEqual(referenceFileContentPlain);
+  expect(genDiff(pathToFile1, pathToFile2, 'json')).toEqual(referenceFileContentJson);
 });
