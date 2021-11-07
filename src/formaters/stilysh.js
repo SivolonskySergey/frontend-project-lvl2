@@ -23,8 +23,8 @@ const stilysh = (diffTree) => {
           return `${getSpace(depth)}    ${child.key}: ${stringify(child.value, depth + 1)}`;
         case 'modified':
           return [
-            `${getSpace(depth)}  - ${child.key}: ${stringify(child.firstObjectValue, depth + 1)}`,
-            `${getSpace(depth)}  + ${child.key}: ${stringify(child.secondObjectValue, depth + 1)}`,
+            `${getSpace(depth)}  - ${child.key}: ${stringify(child.firstObjValue, depth + 1)}`,
+            `${getSpace(depth)}  + ${child.key}: ${stringify(child.secondObjValue, depth + 1)}`,
           ];
         case 'nested':
           return `${getSpace(depth)}    ${child.key}: ${iter(child.children, depth + 1)}`;
