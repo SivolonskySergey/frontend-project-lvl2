@@ -5,6 +5,12 @@ const changeObjectValue = (value) => {
   if (typeof value === 'boolean') {
     return `${value}`;
   }
+  if (typeof value === 'number') {
+    return value;
+  }
+  if (value === null) {
+    return `${null}`;
+  }
   return `'${value}'`;
 };
 
