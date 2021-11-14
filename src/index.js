@@ -32,7 +32,7 @@ const compare = (obj1, obj2) => {
   });
 };
 
-const genDiff = (pathToFile1, pathToFile2, outputFormat = 'stilysh') => {
+const genDiff = (pathToFile1, pathToFile2, outputFormat = 'stylish') => {
   const data1 = parseFile(pathToFile1);
   const data2 = parseFile(pathToFile2);
   const diffTree = compare(data1, data2);
