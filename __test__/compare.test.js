@@ -11,7 +11,7 @@ let referenceFileContentPlain;
 let referenceFileContentJson;
 
 beforeAll(() => {
-  referenceFileContentStylish = open('result_stilysh');
+  referenceFileContentStylish = open('result_stylish');
   referenceFileContentPlain = open('result_plain');
   referenceFileContentJson = open('result_json');
 });
@@ -19,7 +19,7 @@ beforeAll(() => {
 test.each(fileExtensionsList)('Test %s files with stylish, plain and json presentation formats', (extension) => {
   const pathToFile1 = `file1${extension}`;
   const pathToFile2 = `file2${extension}`;
-  expect(genDiff(pathToFile1, pathToFile2, 'stilysh')).toEqual(referenceFileContentStylish);
+  expect(genDiff(pathToFile1, pathToFile2, 'stylish')).toEqual(referenceFileContentStylish);
   expect(genDiff(pathToFile1, pathToFile2, 'plain')).toEqual(referenceFileContentPlain);
   expect(genDiff(pathToFile1, pathToFile2, 'json')).toEqual(referenceFileContentJson);
 });

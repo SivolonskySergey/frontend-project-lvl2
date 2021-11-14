@@ -1,10 +1,10 @@
-import stilysh from './stilysh.js';
+import stilysh from './stylish.js';
 import plain from './plain.js';
 import json from './json.js';
 
 const render = (data, outputFormat) => {
   switch (outputFormat) {
-    case 'stilysh':
+    case 'stylish':
       return stilysh(data);
     case 'plain':
       return plain(data);

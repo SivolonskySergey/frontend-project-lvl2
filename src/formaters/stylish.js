@@ -11,7 +11,7 @@ const stringify = (value, depth) => {
   return `{\n${innerValues.join('\n')}\n${getSpace(depth)}}`;
 };
 
-const stilysh = (diffTree) => {
+const stylish = (diffTree) => {
   const iter = (node, depth) => {
     const stylishValues = node.flatMap((child) => {
       switch (child.status) {
@@ -37,4 +37,4 @@ const stilysh = (diffTree) => {
   return iter(diffTree, 0);
 };
 
-export default stilysh;
+export default stylish;
