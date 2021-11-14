@@ -1,9 +1,6 @@
 const changeObjectValue = (value) => {
-  if (typeof value === 'object' && value.length !== 0) {
+  if (typeof value === 'object' && value !== null) {
     return '[complex value]';
-  }
-  if (typeof value === 'object' && value.length === 0) {
-    return null;
   }
   if (typeof value === 'boolean') {
     return `${value}`;
