@@ -1,3 +1,4 @@
 import genDiff from './src/index.js';
 
-genDiff();
+const egn = genDiff('file1.json', 'file2.yml', 'plain');
+console.log(egn);

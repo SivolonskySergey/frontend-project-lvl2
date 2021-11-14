@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 import _ from 'lodash';
 import path from 'path';
-import openFile from './openfile.js';
+import fs from 'fs';
 import parse from './parsers.js';
 import render from './formaters/index.js';
 
 const parseFile = (pathToFile) => {
   const format = path.extname(pathToFile).toLowerCase().slice(1);
-  const content = openFile(pathToFile);
+  const content = fs.readFileSync(path.resolve(process.cwd(), pathToFile), 'utf8');
   return parse(content, format);
 };
 
