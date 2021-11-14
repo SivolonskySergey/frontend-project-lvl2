@@ -15,7 +15,7 @@ const makePlainView = (tree) => {
         case 'deleted':
           return `Property '${keyPath}' was removed`;
         case 'modified':
-          return `Property '${keyPath}' was updated. From ${changeObjectValue(child.firstObjValue)} to ${changeObjectValue(child.secondObjValue)}}`;
+          return `Property '${keyPath}' was updated. From ${changeObjectValue(child.firstObjValue)} to ${changeObjectValue(child.secondObjValue)}`;
         case 'unmodified':
           return [];
         case 'nested':
