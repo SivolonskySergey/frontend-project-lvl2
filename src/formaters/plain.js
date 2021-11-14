@@ -11,11 +11,11 @@ const makePlainView = (tree) => {
       const keyPath = `${parentKey}${child.key}`;
       switch (child.status) {
         case 'added':
-          return `Property ${keyPath} was added with value: ${changeObjectValue(child.value)}`;
+          return `Property '${keyPath}' was added with value: ${changeObjectValue(child.value)}`;
         case 'deleted':
-          return `Property ${keyPath} was removed`;
+          return `Property '${keyPath}' was removed`;
         case 'modified':
-          return `Property ${keyPath} was updated. From ${changeObjectValue(child.firstObjValue)} to ${changeObjectValue(child.secondObjValue)}}`;
+          return `Property '${keyPath}' was updated. From ${changeObjectValue(child.firstObjValue)} to ${changeObjectValue(child.secondObjValue)}}`;
         case 'unmodified':
           return [];
         case 'nested':
