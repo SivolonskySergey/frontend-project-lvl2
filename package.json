@@ -29,7 +29,7 @@
   "homepage": "https://github.com/SivolonskySergey/frontend-project-lvl2#readme",
   "dependencies": {
     "commander": "^8.3.0",
-    "debug": "^4.3.2",
+    "debug": "^4.3.4",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
